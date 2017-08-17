@@ -1,0 +1,12 @@
+applications:
+ - path: .
+   memory: 128M
+   instances: 1
+   #domain: eu-gb.mybluemix.net
+   name: polls
+   host: polls
+   disk_quota: 1024M
+   buildpack: https://github.com/cloudfoundry/python-buildpack#v1.5.1
+   cf_stacks:
+     - cflinuxfs2  
+   command: bash ./run.sh
